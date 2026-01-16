@@ -7,7 +7,7 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { Loader2 } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setAuthUser } from '../redux/authslice'
+import { setAuthUser } from '../redux/authSlice'
 
 
 const Login = () => {
