@@ -1,0 +1,36 @@
+C:\Users\visha\instagram clone>cd backend
+
+C:\Users\visha\instagram clone\backend>npm init -y
+C:\Users\visha\instagram clone\backend>npm i express mongoose nodemon  jsonwebtoken bcryptjs cookie-parser cors  dotenv  datauri cloudinary multer sharp
+C:\Users\visha\instagram clone\backend>npm i socket.io
+C:\Users\visha\instagram clone\backend>npm run dev       run server
+
+
+
+//shadcn/ui
+Microsoft Windows [Version 10.0.26100.6725]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\visha\instagram clone>cd frontend
+
+C:\Users\visha\instagram clone\frontend>npx shadcn@latest add label
+✔ Checking registry.
+✔ Installing dependencies.
+✔ Created 1 file:
+  - src\components\ui\label.jsx
+
+
+C:\Users\visha\instagram clone\frontend>npx shadcn@latest add input
+✔ Checking registry.
+✔ Created 1 file:
+  - src\components\ui\input.jsx
+
+
+C:\Users\visha\instagram clone\frontend>npm run dev
+C:\Users\visha\instagram clone\frontend>npm i axios
+C:\Users\visha\instagram clone\frontend>npx shadcn@latest add sonner
+C:\Users\visha\instagram clone\frontend>npm i react-router-do
+C:\Users\visha\instagram clone\frontend>npx shadcn@latest add avatar
+C:\Users\visha\instagram clone\frontend>npx shadcn@latest add dialog
+C:\Users\visha\instagram clone\frontend>npm i react-icons
+C:\Users\visha\instagram clone\frontend>npm i socket.io-client
