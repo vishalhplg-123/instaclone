@@ -2,7 +2,6 @@ import sharp from "sharp";
 import cloudinary from "../utils/cloudinary.js";
 import { Post } from "../models/post.model.js";
 import { User } from "../models/user.model.js";
-import { path, select } from "motion/react-client";
 import DatauriParser from "datauri/parser.js";
 import { Comment } from "../models/comments.model.js";
 import { getReceiverSocketId, io } from "../socket/socket.js";
@@ -218,7 +217,10 @@ export const dislikePost = async (req, res) => {
       };
 
       const postOwnerSocketId = getReceiverSocketId(postOwnerId);
-      io.to(postOwnerSocketId).emit("notification", notification);
+      // io.to(postOwnerSocketId).emit("notification", notification);
+      if(postOwnerSocketId) {
+             io.to(postOwnerSocketId).emit("notification", notification);
+       }
     }
 
     return res.status(200).json({ message: "Post disliked", success: true });

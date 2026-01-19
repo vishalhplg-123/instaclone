@@ -52,7 +52,11 @@ import path from "path";
 
 dotenv.config();
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 // Test route
 app.get("/", (req, res) => {
@@ -68,7 +72,10 @@ app.use(cookieParser()); // ✅ FIXED
 app.use(express.urlencoded({ extended: true })); // ✅ FIXED
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+    origin: [
+    "http://localhost:5173",
+    "https://instaclone-frontend.onrender.com"
+  ],
   credentials: true, // ✅ FIXED: should be lowercase 'credentials'
 };
 app.use(cors(corsOptions));
@@ -92,7 +99,7 @@ app.use((req, res) => {
 });
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 server.listen(PORT, () => {
   connectDb();
