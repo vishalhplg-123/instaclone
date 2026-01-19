@@ -5,6 +5,7 @@ import { User } from "../models/user.model.js";
 import DatauriParser from "datauri/parser.js";
 import { Comment } from "../models/comments.model.js";
 import { getReceiverSocketId, io } from "../socket/socket.js";
+import getDataUri from "../utils/datauri.js";
 
 export const addNewPost = async (req, res) => {
   try {
